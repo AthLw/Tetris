@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    float: left;
+}
+
+table{
+    width: 450px;
+    height: 600px;
+    margin-left: 280px;
+    margin-top: 80px;
+    table-layout: fixed;
+    border-collapse: collapse;
+    position: absolute;
+}
+
+td{
+    width: 30px;
+    height: 30px;
+    border: 1px solid;
+}
+
+#data{
+    width: 200px;
+    height: 400px;
+    position: absolute;
+    right: 400px;
+    top: 200px;
+}
