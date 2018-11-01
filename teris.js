@@ -1,4 +1,4 @@
-import model from './Model.js';
+﻿import model from './Model.js';
 
 var graph = new Array();
 
@@ -10,7 +10,6 @@ var renderId;
 var currentShape = null;
 var currentObj = null;
 var preObj = null;                          //存储前一帧对象位置
-
 
 init();
 document.onkeydown = listener;
