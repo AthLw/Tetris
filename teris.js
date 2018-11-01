@@ -62,11 +62,24 @@ function generateObj(){
     currentObj = {
         id: currentShape.getId(),
         edge: [0, 7],
-        area: currentShape.getModel(),
+        area: changeColor(currentShape.getModel()),
     };
     needNext = false;
     //NormalMove('D');
     return;
+}
+
+function changeColor(area){
+    let colors = ['I','J','O','L','S','N','T'];
+    for(let i = 0; i < area.length; i++){
+        for(let j = 0; j < area[0].length; j++){
+            if(area[i][j] != -1){
+                let rand = parseInt(Math.random()*7,10);
+                area[i][j] = colors[rand];
+            }
+        }
+    }
+    return area;
 }
 
 function Next(){
@@ -94,7 +107,7 @@ function DataRefresh(){
         currentObj = {
             id: currentShape.getId(),
             edge: [0, 7],
-            area: currentShape.getModel(),
+            area: changeColor(currentShape.getModel()),
         };
         //debug();
         Map(currentObj, "addCurrent");
@@ -414,7 +427,7 @@ function chooseColor(value){
     switch(value){
         case -1:
             //背景色
-            return "Lime";
+            return "Grey";
         case 'I':
             return "Cyan";
         case 'J':
