@@ -92,7 +92,7 @@ function Run(){
 }
 
 function DataRefresh(){
-    
+
     // if(removeRes){
     //     //preObj = currentObj;
     //     console.log("remove failed");
@@ -116,7 +116,7 @@ function DataRefresh(){
         NormalMove('D');
         //debug();
     }
-    
+
 }
 
 // function debug(){
@@ -145,7 +145,7 @@ function NormalMove(direction){
         }
         return Next();
     }
-    
+
     if(currentObj == null){
         return;
     }
@@ -170,12 +170,12 @@ function NormalMove(direction){
     //debug();
 }
 
-function listener(){
+function listener(e){
     if(currentObj == null){
         return;
     }
     let offset = '';
-    let e = event;
+
     switch(e.keyCode){
         case 37:           //左移函数
             offset = 'L';
@@ -197,11 +197,11 @@ function listener(){
             NormalMove(offset);
             break;
     }
-    
+
 }
 
 function Map(Obj, dest){
-    
+
     if(Obj == null){
         return false;
     }
@@ -255,7 +255,7 @@ function Map(Obj, dest){
                         if(globalrows[j+Obj.edge[1]] != -1){
                             return false;
                         }
-                        break;   
+                        break;
                 }
             }
         }
